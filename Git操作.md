@@ -60,14 +60,18 @@ git status   #查看工作区、暂存区状态
 ```
 git add fileName  #指定文件
 git add . #所有
-说明：将工作区的文件添加到暂存区
+说明：将工作区的新建/修改添加到暂存区
 ```
 
 #### 1.3.3 提交
 
 ```
 git commit -m 'commit message' fileName
-说明：将暂存区内容提交到本地库
+说明：将暂存区内容提交到本地库，这种方式不用进入vim编辑器
+```
+```
+git commit fileName 
+说明：这种方式会打开vim编辑器，在输入message后ESC， :wq 退出vim编辑器
 ```
 
 #### 1.3.4 查看历史记录
