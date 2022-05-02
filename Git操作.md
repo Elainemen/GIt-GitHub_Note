@@ -268,7 +268,7 @@ git pull 别名 分支名
 
 `注意：解决冲突后的提交是不能带文件名的`
 
-`如果不是基于远程库最新版做的修改不能推送，必须先pull下来安装冲突办法解决`
+`如果不是基于远程库最新版做的修改不能推送，必须先pull下来,如果进入冲突状态，则按照“分支冲突解决”操作解决即可
 
 
 #### 1.6 跨团队合作
@@ -289,23 +289,8 @@ git pull 别名 分支名
 
     `点击别人仓库的fork 到自己的仓库`   -- > `然后clone下来 修改后推送到远程库`  --> `点击Pull Request请求` --> `Create pull request发消息`
 
-#### 1.7 Tag标签
 
-`为了清晰的版本管理，公司一般不会直接使用commit提交`
-
-```
-git tag -a v1.0 -m '版本介绍'   #创建本地tag信息
-git tag -d v1.0    		#删除tag
-git push origin --tags   #将本地tag信息推送到远程库
-git pull origin --tags    #拉取到本地
-
-git checkout v.10    #切换tag
-git clone -b v0.1 地址   #指定tag下载代码
-```
-
-
-
-#### 1.8 SSH 免密登录
+#### 1.7  SSH 免密登录
 
 - 输入:`ssh-keygen -t rsa -C GitHub邮箱地址`  
 - 进入`.ssh`目录，复制`id_rsa.pub`文件内容
