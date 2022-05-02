@@ -294,8 +294,9 @@ git pull 别名 分支名
 
 - 输入:`ssh-keygen -t rsa -C GitHub邮箱地址`  
 - 用`cd .ssh/`进入`.ssh`目录，复制`id_rsa.pub`文件内容
-- 登录GitHub。`Settings`  --> `SSH and GPG keys ` --> `New SSH Key    `
-- 回到git通过ssh地址创建。`git remote add 别名 SSH地址  `
+- 登录GitHub。`Settings`  --> `SSH and GPG keys ` --> `New SSH Key    ` 把上一步复制的粘贴进来
+- 回到git通过ssh地址创建。`git remote add ssh别名 SSH地址  `
+- 推送时可以往ssh别名里推送`git push ssh别名 分支名` 输入yes确认
 
 ## Git工作流
 
