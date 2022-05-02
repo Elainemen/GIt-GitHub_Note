@@ -293,7 +293,7 @@ git pull 别名 分支名
 #### 1.7  SSH 免密登录
 
 - 输入:`ssh-keygen -t rsa -C GitHub邮箱地址`  
-- 进入`.ssh`目录，复制`id_rsa.pub`文件内容
+- 用`cd .ssh/`进入`.ssh`目录，复制`id_rsa.pub`文件内容
 - 登录GitHub。`Settings`  --> `SSH and GPG keys ` --> `New SSH Key    `
 - 回到git通过ssh地址创建。`git remote add 别名 SSH地址  `
 
