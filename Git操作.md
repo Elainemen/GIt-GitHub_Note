@@ -220,13 +220,13 @@ git branch -d 分支名
 
 ## Git 结合Github
 
-`别分手`  `别名 分支名`
+ `别名 分支名`
 
 #### 1.1 创建远程库地址别名
 
 ~~~
 git remote -v  #查看远程地址别名
-git remote add 别名 远程地址 
+git remote add git远程地址别名 远程地址 
 例子：git remote add origin https://xx
 ~~~
 
@@ -235,8 +235,8 @@ git remote add 别名 远程地址
 `开发修改完把本地库的文件推送到远程仓库` `前提是提交到了本地库才可以推送`
 
 ~~~
-git push 别名 分支名
-git push -u 别名 分支名    #-u指定默认主机
+git push 远程地址别名 分支名
+git push -u 远程地址别名 分支名    #-u指定默认主机
 例子：git push origin master
 ~~~
 
