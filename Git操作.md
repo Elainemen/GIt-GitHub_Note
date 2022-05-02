@@ -111,6 +111,7 @@ q退出
 
   ```
   git reset --hard HEAD~n
+  n 表示后退的步数
   例子：git reset --hard HEAD~3
   ```
 
