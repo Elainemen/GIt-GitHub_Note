@@ -78,12 +78,17 @@ git commit fileName
 
 ```
 git log 
-git reflog  #常用
+git reflog  #常用，在oneline的版本基础上增加了 HEAD@{移动到当前版本需要的步数}
 git log --greph #图形显示,更直观
 git log --pretty=oneline #漂亮一行显示
-git log --oneline #简洁显示
+git log --oneline #和漂亮一行相似，但更简洁，只显示部分哈希值
 说明：HEAD@{移动到当前版本需要多少步}
 ```
+多屏显示时的控制方式：
+空格向下饭也
+b向上翻页
+q退出
+
 
 #### 1.3.5 前进后退
 
