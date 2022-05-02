@@ -226,7 +226,7 @@ git branch -d 分支名
 
 ~~~
 git remote -v  #查看远程地址别名
-git remote add git远程地址别名 远程地址 
+git remote add 远程地址别名 远程地址 
 例子：git remote add origin https://xx
 ~~~
 
@@ -259,8 +259,8 @@ git clone  远程地址
 
 ```
 pull = fetch + merge
-	git fetch 别名 分支名
-	git merge 别名 分支名
+	git fetch 远程地址别名 分支名
+	git merge 远程地址别名/分支名
 git pull 别名 分支名
 ```
 
@@ -270,33 +270,8 @@ git pull 别名 分支名
 
 `如果不是基于远程库最新版做的修改不能推送，必须先pull下来安装冲突办法解决`
 
-#### 1.6 rebase
 
-`提交记录简洁不分叉`  `没学懂，感觉有点鸡肋` `混眼熟`
-
-```
-git rebase -i 索引号
-git rebase -i HEAD~3  #合并最近三条记录
-说明：在vim编辑里面改成s
-```
-
-#### 1.7 beyond compare 
-
-`用软件解决冲突` 
-
- ```
-1.安装 ：
-	beyond compare 
-2.配置：
-    git config --local merge.tool bc3  #合并名称
-    git config --local mergetool.path '/usr/local/bin/bcomp' #软件路径
-    git config --local mergetool.keepBackup false  #False不用保存备份
-3.应用：
-	git mergetool
-说明：--local指只在当前操作系统有效
- ```
-
-#### 1.8 跨团队合作
+#### 1.6 跨团队合作
 
 `代码review之后合并`
 
@@ -314,7 +289,7 @@ git rebase -i HEAD~3  #合并最近三条记录
 
     `点击别人仓库的fork 到自己的仓库`   -- > `然后clone下来 修改后推送到远程库`  --> `点击Pull Request请求` --> `Create pull request发消息`
 
-#### 1.9 Tag标签
+#### 1.7 Tag标签
 
 `为了清晰的版本管理，公司一般不会直接使用commit提交`
 
@@ -330,7 +305,7 @@ git clone -b v0.1 地址   #指定tag下载代码
 
 
 
-#### 1.10 SSH 免密登录
+#### 1.8 SSH 免密登录
 
 - 输入:`ssh-keygen -t rsa -C GitHub邮箱地址`  
 - 进入`.ssh`目录，复制`id_rsa.pub`文件内容
